@@ -1,5 +1,5 @@
 
-REPORTER = 
+REPORTER = dot
 
 test:
   @echo Running Tests
@@ -9,6 +9,6 @@ coverage:
   @echo Running Coverage Tests
   @jscoverage lib lib-cov
   @COVERAGE=1 make test REPORTER=html-cov > coverage.html
-  @rm -rf lib-cov/* 
+  @rm -rf lib-cov/*
 
 .PHONY: test coverage

@@ -6,6 +6,7 @@
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "main": "index",
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "should": "*"
   }
 }
