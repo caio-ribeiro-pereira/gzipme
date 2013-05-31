@@ -1,9 +1,9 @@
 {
-  "name": "gzip-me",
-  "description": "Gzip Me: A simple module to gzip a list of files or full directories for Node.js",
+  "name": "gzipme",
+  "description": "Gzipme: A simple module to gzip a list of files or full directories on Node.js",
   "version": "1.0.0",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
-  "repository": "git://github.com/caio-ribeiro-pereira/gzip-me",
+  "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "main": "index",
   "devDependencies": {
     "mocha": "*"

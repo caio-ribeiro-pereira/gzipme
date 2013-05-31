@@ -1,4 +1,4 @@
-gzip-me
+gzipme
 =======
 
-Gzip Me: A simple module to gzip a list of files or full directories for Node.js
+Gzipme: A simple module to gzip a list of files or full directories on Node.js
