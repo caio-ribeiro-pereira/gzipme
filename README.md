@@ -44,7 +44,9 @@ to overwrite the "file.txt" replacing to the compressed file.
 ## Author
 
 Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>
+
 Twitter: <http://twitter.com/crp_underground>
+
 Blog: <http://udgwebdev.com>
 
 ## License
