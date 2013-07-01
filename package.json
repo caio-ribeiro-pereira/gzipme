@@ -1,12 +1,29 @@
 {
   "name": "gzipme",
-  "description": "Gzipme: A simple module to gzip a list of files or full directories on Node.js",
-  "version": "1.0.0",
+  "description": "A simple module to gzip files.",
+  "version": "0.0.0",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "main": "index",
+  "bin": {
+    "gzipme": "./bin/gzipme"
+  },
+  "directories": { 
+    "test": "./test", 
+    "bin": "./bin" 
+  },
+  "scripts": {
+    "test": "make test && make coverage && open coverage.html"
+  },
+  "dependencies": {
+    "mkdirp": "~0.3.4",
+    "commander": "~1.2.0"
+  },
   "devDependencies": {
     "mocha": "*",
     "should": "*"
+  },
+  "engines": {
+    "node": ">= 0.5.0"
   }
 }

@@ -1,14 +1,16 @@
 
-REPORTER = dot
-
+REPORTER = spec
 test:
-  @echo Running Tests
-  @NODE_ENV=test ./node_modules/.bin/mocha --reporter $(REPORTER)
+	@echo Mocha Test
+	@NODE_ENV=test ./node_modules/.bin/mocha test/*.js \
+	--reporter $(REPORTER) --slow 1000
 
 coverage:
-  @echo Running Coverage Tests
-  @jscoverage lib lib-cov
-  @COVERAGE=1 make test REPORTER=html-cov > coverage.html
-  @rm -rf lib-cov/*
+	@echo Coverage Test
+	@rm -rf lib-cov
+	@mkdir -p lib-cov
+	@jscoverage lib lib-cov
+	@COVERAGE=1 REPORTER=html-cov > coverage.html make test 
+	@rm -rf lib-cov
 
 .PHONY: test coverage

@@ -3,7 +3,7 @@ var fs = require('fs')
 
 describe('gzipme', function(){
 
-  var testfile = __dirname + "/test.json"
+  var testfile = __dirname "test.json"
     , testgzfile = testfile + ".gz";
 
   beforeEach(function(done) {
@@ -18,12 +18,12 @@ describe('gzipme', function(){
     done();
   });
 
-  it('should generate a gzip version of the file test.json', function(done){
-    gzipme(testfile, function(gz) {
-      gz.should.equal(testgzfile);
-      gz.should.not.equal(testfile);
-      done();
-    });
+  it('should compress test.json to test.json.gz', function(done){
+    
+  });
+
+  it('should compressSync test.json to test.json.gz', function(done){
+    
   });
 
 });
