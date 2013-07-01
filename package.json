@@ -1,7 +1,7 @@
 {
   "name": "gzipme",
   "description": "A simple module to gzip files.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "main": "index",
@@ -16,7 +16,6 @@
     "test": "make test && make coverage && open coverage.html"
   },
   "dependencies": {
-    "mkdirp": "~0.3.4",
     "commander": "~1.2.0"
   },
   "devDependencies": {

@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+  , gzipme = require('../index')
+  , pkg = require('../package.json')
+;
+
+program
+  .version(pkg.version)
+  .usage('[options] <file>')
+  .option('-o, --overwrite', 'Overwrite file (default false).')
+  .parse(process.argv);
+
+gzipme(program.args.toString(), (program.overwrite || false));
+
+console.log("Gzipme has finished the compression.");

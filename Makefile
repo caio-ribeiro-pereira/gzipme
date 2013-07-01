@@ -10,7 +10,8 @@ coverage:
 	@rm -rf lib-cov
 	@mkdir -p lib-cov
 	@jscoverage lib lib-cov
-	@COVERAGE=1 REPORTER=html-cov > coverage.html make test 
+	@COVERAGE=1 NODE_ENV=test ./node_modules/.bin/mocha test/*.js \
+	--reporter html-cov > coverage.html --slow 1000
 	@rm -rf lib-cov
 
 .PHONY: test coverage
