@@ -13,7 +13,7 @@
     "bin": "./bin" 
   },
   "scripts": {
-    "test": "make test && make coverage && open coverage.html"
+    "test": "make test"
   },
   "dependencies": {
     "commander": "~1.2.0"
