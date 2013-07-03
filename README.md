@@ -63,6 +63,13 @@ Twitter: <http://twitter.com/crp_underground>
 
 Blog: <http://udgwebdev.com>
 
+## TODO
++ Decompress gzip files
++ Compress directories and subdirectories
++ Compress and Decompress in async function
+
+New ideas will be welcome here! :D
+
 ## License
 
 The MIT License (MIT)
