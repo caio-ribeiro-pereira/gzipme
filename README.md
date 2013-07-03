@@ -1,6 +1,7 @@
-gzipme
-[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme)
-[![Dependency Status](https://gemnasium.com/caio-ribeiro-pereira/gzipme.png)](https://gemnasium.com/caio-ribeiro-pereira/gzipme)
+# gzipme
+
+
+[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme)[![Dependency Status](https://gemnasium.com/caio-ribeiro-pereira/gzipme.png)](https://gemnasium.com/caio-ribeiro-pereira/gzipme)
 =======
 A simple Node module and CLI which gzip file for you! :)
 
