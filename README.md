@@ -1,8 +1,8 @@
-# gzipme
-
+## Build Status 
 
 [![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme)[![Dependency Status](https://gemnasium.com/caio-ribeiro-pereira/gzipme.png)](https://gemnasium.com/caio-ribeiro-pereira/gzipme)
-=======
+
+## About
 A simple Node module and CLI which gzip file for you! :)
 
 It's very simple to use it, just follow the documentation below...
@@ -43,6 +43,17 @@ or
 gzipme -o file.txt
 ```
 to overwrite the "file.txt" replacing to the compressed file.
+
+## Running tests
+
+Just clone this repository, and follow the commands below:
+``` bash
+git clone git@github.com:caio-ribeiro-pereira/gzipme.git
+cd gzipme
+npm install
+npm test
+```
+It will run Mocha tests and will generate coverage reports.
 
 ## Author
 
