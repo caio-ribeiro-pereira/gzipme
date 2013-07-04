@@ -46,6 +46,13 @@ gzipme -o file.txt
 ```
 to overwrite the "file.txt" replacing to the compressed file.
 
+or
+
+``` bash
+gzipme -O compressed.txt file.txt
+```
+to save the file as "compressed.txt" instead of the default.
+
 ## Running tests
 
 Just clone this repository, and follow the commands below:
