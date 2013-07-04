@@ -1,5 +1,8 @@
 CHANGELOG
 
+## 0.0.3
++ Feature: Generate custom output file.
+
 ## 0.0.2
 + Bugfix: Grunt compatibility 
 
