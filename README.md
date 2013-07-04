@@ -1,4 +1,4 @@
-## Build Status 
+## Build Status
 
 [![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme)[![Dependency Status](https://gemnasium.com/caio-ribeiro-pereira/gzipme.png)](https://gemnasium.com/caio-ribeiro-pereira/gzipme)
 
@@ -21,6 +21,8 @@ var gzipme = require('gzipme');
 gzipme("file.txt"); // it will compress and generate "file.txt.gz" in the same path.
 
 gzipme("file.txt", true); // it will overwrite the "file.txt" replacing to the compressed file.
+
+gzipme("file.txt", "compressed.txt"); // it will compress and generate specified file "compressed.txt" in the same path.
 ```
 
 ## CLI Version
@@ -43,6 +45,13 @@ or
 gzipme -o file.txt
 ```
 to overwrite the "file.txt" replacing to the compressed file.
+
+or
+
+``` bash
+gzipme -O compressed.txt file.txt
+```
+to save the file as "compressed.txt" instead of the default.
 
 ## Running tests
 

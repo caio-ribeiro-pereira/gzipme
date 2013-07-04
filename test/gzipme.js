@@ -6,6 +6,7 @@ describe('gzipme', function(){
 
   var testPath = __dirname + "/compress"
     , testFile = testPath + "/test.json"
+    , testOutputFile = testPath + "/output.json"
     , testBlankFile = testPath + "/blank"
     , testGzipFile = testFile + ".gz"
     , invalidFile = new Object()
@@ -47,4 +48,12 @@ describe('gzipme', function(){
     done();
   });
 
+  it('should compress test.json to specified output file instead of default', function(done){
+      gzipme(testFile, testOutputFile);
+      var existDefault  = fs.existsSync(testGzipFile);
+      var existGzip  = fs.existsSync(testOutputFile);
+      existDefault.should.be.false;
+      existGzip.should.be.true;
+      done();
+  });
 });
