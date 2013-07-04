@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme)[![Dependency Status](https://gemnasium.com/caio-ribeiro-pereira/gzipme.png)](https://gemnasium.com/caio-ribeiro-pereira/gzipme)
 
 ## About
-A simple Node module and CLI which gzip file for you! :)
-
+A simple Node module and CLI tools which gzip files for you! :)
+Compatible with Node 0.5.x or earlier versions.
 It's very simple to use it, just follow the documentation below...
 
 ## Module Version

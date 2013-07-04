@@ -1,7 +1,7 @@
 {
   "name": "gzipme",
   "description": "Gzipme is a Node module and CLI tool which compress files to gzip. It's built on top of zlib module and it's very easy to use it.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "main": "index",
