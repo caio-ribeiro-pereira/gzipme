@@ -62,7 +62,8 @@ cd gzipme
 npm install
 npm test
 ```
-It will run Mocha tests and will generate coverage reports.
+
+It will run Mocha tests and will generate coverage reports and [all coverage tests are here](http://caio-ribeiro-pereira.github.io/gzipme/coverage.html).
 
 ## Author
 
