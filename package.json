@@ -1,7 +1,7 @@
 {
   "name": "gzipme",
   "description": "A simple module and CLI gzip file.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "main": "index",

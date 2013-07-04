@@ -6,6 +6,7 @@ describe('gzipme', function(){
 
   var testPath = __dirname + "/compress"
     , testFile = testPath + "/test.json"
+    , testBlankFile = testPath + "/blank"
     , testGzipFile = testFile + ".gz"
     , invalidFile = new Object()
     , testFileContent = '{"test": "this is the test.json"}'
@@ -14,6 +15,7 @@ describe('gzipme', function(){
   beforeEach(function(done) {
     exec('mkdir -p '+ testPath, function() {
       fs.writeFileSync(testFile, testFileContent);
+      fs.writeFileSync(testBlankFile, '');
       done();
     });
   });
@@ -26,28 +28,22 @@ describe('gzipme', function(){
 
   it('should compress test.json to test.json.gz', function(done){
     gzipme(testFile);
-    var files = fs.readdirSync(testPath);
-    var stat  = fs.statSync(testGzipFile);
-    
-    files.should.have.lengthOf(2);  
-    stat.isFile().should.be.true;
+    var existGzip  = fs.existsSync(testGzipFile);
+    existGzip.should.be.true;
     done();
   });
 
   it('should compress test.json overwrite to test.json', function(done){
     gzipme(testFile, true);
-    var files = fs.readdirSync(testPath);
-    var stat  = fs.statSync(testFile);
-    
-    files.should.have.lengthOf(1);  
-    stat.isFile().should.be.true;
+    var existGzip  = fs.existsSync(testGzipFile);
+    existGzip.should.be.false;
     done();
   });
 
-  it('should throw error on compress invalid file', function(done){
+  it('should throw error on compress file which does not exist', function(done){
     (function(){
       gzipme(invalidFile);
-    }).should.throwError(/^Invalid file.*/);
+    }).should.throwError("File "+invalidFile+" doesn't exist.");
     done();
   });
 
