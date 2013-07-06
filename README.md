@@ -1,6 +1,6 @@
 ## Build Status
 
-[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme)[![Dependency Status](https://gemnasium.com/caio-ribeiro-pereira/gzipme.png)](https://gemnasium.com/caio-ribeiro-pereira/gzipme)
+[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme) [![Dependency Status](https://gemnasium.com/caio-ribeiro-pereira/gzipme.png)](https://gemnasium.com/caio-ribeiro-pereira/gzipme)
 
 ## About
 A simple Node module and CLI tools which gzip files for you! :)
@@ -18,11 +18,14 @@ npm install gzipme
 ``` javascript
 var gzipme = require('gzipme');
 
-gzipme("file.txt"); // it will compress and generate "file.txt.gz" in the same path.
+// Compress "file.txt" to "file.txt.gz" in the same dir.
+gzipme("file.txt"); 
 
-gzipme("file.txt", true); // it will overwrite the "file.txt" replacing to the compressed file.
+// Compress "file.txt" and overwrite it to "file.txt" in the same dir.
+gzipme("file.txt", true); 
 
-gzipme("file.txt", "compressed.txt"); // it will compress and generate specified file "compressed.txt" in the same path.
+// Compress "file.txt" to specified file "compressed.txt" in the same dir.
+gzipme("file.txt", "compressed.txt");
 ```
 
 ## CLI Version
@@ -32,28 +35,18 @@ gzipme("file.txt", "compressed.txt"); // it will compress and generate specified
 npm install -g gzipme
 ```
 
-### The Command
+### The Commands
 
 ``` bash
+// It's the same as function 'gzipme("file.txt")'.
 gzipme file.txt
-```
-to compress and generate "file.txt.gz" in the same path.
-
-or
-
-``` bash
+// It's the same as function 'gzipme("file.txt", true)'.
 gzipme -o file.txt
-```
-to overwrite the "file.txt" replacing to the compressed file.
-
-or
-
-``` bash
+// It's the same as function 'gzipme("file.txt", "compressed.txt")'.
 gzipme -O compressed.txt file.txt
 ```
-to save the file as "compressed.txt" instead of the default.
 
-## Node's compatibilities
+## Node.js's compatibilities
 + 0.5.x
 + 0.6.x
 + 0.7.x
