@@ -1,4 +1,5 @@
 var fs = require('fs')
+  , path = require('path')
   , exec = require('child_process').exec
   , gzipme = require('../')
   , existsSync = 'existsSync' in fs ? fs.existsSync : path.existsSync 
