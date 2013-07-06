@@ -55,12 +55,12 @@ to save the file as "compressed.txt" instead of the default.
 
 ## Node's compatibilities
 + 0.5.x
++ 0.6.x
++ 0.7.x
 + 0.8.x
++ 0.9.x
 + 0.10.x
 + 0.11.x
-
-On 0.6.x won't work because there is no fs.existSync function.
-
 
 ## Running tests
 
