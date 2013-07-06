@@ -38,11 +38,11 @@ npm install -g gzipme
 ### The Commands
 
 ``` bash
-// It's the same as function 'gzipme("file.txt")'.
+# It's the same as function 'gzipme("file.txt")'.
 gzipme file.txt
-// It's the same as function 'gzipme("file.txt", true)'.
+# It's the same as function 'gzipme("file.txt", true)'.
 gzipme -o file.txt
-// It's the same as function 'gzipme("file.txt", "compressed.txt")'.
+# It's the same as function 'gzipme("file.txt", "compressed.txt")'.
 gzipme -O compressed.txt file.txt
 ```
 
