@@ -1,6 +1,8 @@
 var fs = require('fs')
   , exec = require('child_process').exec
-  , gzipme = require('../');
+  , gzipme = require('../')
+  , existsSync = 'existsSync' in fs ? fs.existsSync : path.existsSync 
+;
 
 describe('gzipme', function(){
 
@@ -27,14 +29,14 @@ describe('gzipme', function(){
 
   it('should compress test.json to test.json.gz', function(done){
     gzipme(testFile);
-    var existGzip  = fs.existsSync(testGzipFile);
+    var existGzip  = existsSync(testGzipFile);
     existGzip.should.be.true;
     done();
   });
 
   it('should compress test.json overwrite to test.json', function(done){
     gzipme(testFile, true);
-    var existGzip  = fs.existsSync(testGzipFile);
+    var existGzip  = existsSync(testGzipFile);
     existGzip.should.be.false;
     done();
   });
@@ -48,8 +50,8 @@ describe('gzipme', function(){
 
   it('should compress test.json to specified output file', function(done){
       gzipme(testFile, testOutputFile);
-      var existDefault  = fs.existsSync(testGzipFile);
-      var existGzip  = fs.existsSync(testOutputFile);
+      var existDefault  = existsSync(testGzipFile);
+      var existGzip  = existsSync(testOutputFile);
       existDefault.should.be.false;
       existGzip.should.be.true;
       done();
