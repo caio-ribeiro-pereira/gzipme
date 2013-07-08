@@ -1,3 +1,6 @@
+## 0.0.6
++ Bugfix: Using path.resolve to avoid path problems
+
 ## 0.0.5
 + Feature: Compress mode (best and fast compression)
 + Feature: Compress mode for CLI
