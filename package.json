@@ -4,6 +4,7 @@
   "version": "0.0.5",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
+  "keywords" : ["gzip", "zlib"],
   "main": "index",
   "bin": {
     "gzipme": "./bin/gzipme"
@@ -13,14 +14,15 @@
     "bin": "./bin" 
   },
   "scripts": {
-    "test": "make test"
+    "test": "make coverage"
   },
   "dependencies": {
     "commander": "~1.2.0"
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "jscoverage": "*"
   },
   "engines": {
     "node": ">= 0.5.0"
