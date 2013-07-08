@@ -26,7 +26,16 @@ gzipme("file.txt", true);
 
 // Compress "file.txt" to specified file "compressed.txt" in the same dir.
 gzipme("file.txt", "compressed.txt");
+
+// Compress "file.txt" using best compress mode (few bytes, but slow compression).
+gzipme("file.txt", false, "best"); 
+
+// Compress "file.txt" using fast compress mode (fast compression, but more bytes).
+gzipme("file.txt", false, "fast");
 ```
+
+[Click here](http://nodejs.org/api/zlib.html#zlib_constants) to understand the Node.js Zlib compreension mode.
+
 
 ## CLI Version
 ### Instalation
@@ -44,6 +53,10 @@ gzipme file.txt
 gzipme -o file.txt
 # It's the same as function 'gzipme("file.txt", "compressed.txt")'.
 gzipme -O compressed.txt file.txt
+# It's the same as function 'gzipme("file.txt", false, "best")'.
+gzipme -c best file.txt
+# It's the same as function 'gzipme("file.txt", false, "fast")'.
+gzipme -c fast file.txt
 ```
 
 ## Node.js's compatibilities
@@ -76,11 +89,11 @@ Twitter: <http://twitter.com/crp_underground>
 Blog: <http://udgwebdev.com>
 
 ## TODO
-+ Decompress gzip files
-+ Compress directories and subdirectories
++ Decompress a gzip file
++ Compress full directories and subdirectories
 + Compress and Decompress in async function
 
-New ideas will be welcome here! :D
+And new ideas are welcome here!
 
 ## License
 

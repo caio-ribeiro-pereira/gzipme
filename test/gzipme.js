@@ -49,6 +49,13 @@ describe('gzipme', function(){
     done();
   });
 
+  it('should compress test.json using invalid compress mode', function(done){
+    gzipme(testFile, false, "invalid");
+    var existGzip  = existsSync(testGzipFile);
+    existGzip.should.be.true;
+    done();
+  });
+
   it('should compress test.json to test.json.gz', function(done){
     gzipme(testFile);
     var existGzip  = existsSync(testGzipFile);
