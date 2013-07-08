@@ -35,6 +35,27 @@ describe('gzipme', function(){
     done();
   });
 
+  it('should compress test.json using best compress mode', function(done){
+    gzipme(testFile, false, "best");
+    var existGzip  = existsSync(testGzipFile);
+    existGzip.should.be.true;
+    done();
+  });
+
+  it('should compress test.json using fast compress mode', function(done){
+    gzipme(testFile, false, "fast");
+    var existGzip  = existsSync(testGzipFile);
+    existGzip.should.be.true;
+    done();
+  });
+
+  it('should compress test.json to test.json.gz', function(done){
+    gzipme(testFile);
+    var existGzip  = existsSync(testGzipFile);
+    existGzip.should.be.true;
+    done();
+  });
+
   it('should compress test.json overwrite to test.json', function(done){
     gzipme(testFile, true);
     var existGzip  = existsSync(testGzipFile);
