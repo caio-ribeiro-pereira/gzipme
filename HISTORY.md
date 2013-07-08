@@ -1,3 +1,8 @@
+## 0.0.5
++ Feature: Compress mode (best and fast compression)
++ Feature: Compress mode for CLI
++ Improvements: Log filename on invalid file error
+
 ## 0.0.4
 + Bugfix: Running on Node 0.6.x
 
