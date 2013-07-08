@@ -16,16 +16,20 @@ describe('gzipme', function(){
   ;
 
   beforeEach(function(done) {
-    exec('mkdir -p '+ testPath, function() {
-      fs.writeFileSync(testFile, testFileContent);
-      done();
-    });
+    setTimeout(function() {
+      exec('mkdir -p '+ testPath, function() {
+        fs.writeFileSync(testFile, testFileContent);
+        done();
+      });
+    }, 50);
   });
 
   afterEach(function(done) {
-    exec('rm -rf '+ testPath, function() {
-      done();
-    });
+    setTimeout(function() {
+      exec('rm -rf '+ testPath, function() {
+        done();
+      });
+    }, 50);
   });
 
   it('should compress test.json to test.json.gz', function(done){
