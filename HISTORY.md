@@ -1,3 +1,8 @@
+## 0.0.7
++ Improvements: Avoid overwrite a file when throw an error
++ Improvements: Log a detailed error when throw it
++ Improvements: Update commander.js
+
 ## 0.0.6
 + Bugfix: Using path.resolve to avoid path problems
 
