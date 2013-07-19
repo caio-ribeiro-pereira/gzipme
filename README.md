@@ -59,15 +59,6 @@ gzipme -c best file.txt
 gzipme -c fast file.txt
 ```
 
-## Node.js's compatibilities
-+ 0.5.x
-+ 0.6.x
-+ 0.7.x
-+ 0.8.x
-+ 0.9.x
-+ 0.10.x
-+ 0.11.x
-
 ## Running tests
 
 Just clone this repository, and follow the commands below:

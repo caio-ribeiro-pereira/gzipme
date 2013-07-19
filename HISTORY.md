@@ -1,5 +1,6 @@
 ## 0.0.9
 + Improvements: Drop node 0.5, 0.6, 0.7, 0.9, 11.0 support
++ Improvements: Update commander.js to 2.0.0
 
 ## 0.0.8
 + Improvements: Update commander.js
