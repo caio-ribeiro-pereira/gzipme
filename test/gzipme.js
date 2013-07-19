@@ -3,7 +3,6 @@ var fs = require('fs')
   , path = require('path')
   , exec = require('child_process').exec
   , gzipme = require('../')
-  , exists = 'existsSync' in fs ? fs.existsSync : path.existsSync 
 // Variables
   , testPath = __dirname + "/compress"
   , testFile = testPath + "/test.json"
@@ -30,42 +29,42 @@ describe('gzipme', function(){
 
   it('should compress test.json to test.json.gz', function(done){
     gzipme(testFile);
-    var statGzip  = fs.statSync(testGzipFile);
-    statGzip.isFile().should.be.true;
+    var existGzip  = fs.existsSync(testGzipFile);
+    existGzip.should.be.true;
     done();
   });
 
   it('should compress test.json using best compress mode', function(done){
     gzipme(testFile, false, "best");
-    var statGzip  = fs.statSync(testGzipFile);
-    statGzip.isFile().should.be.true;
+    var existGzip  = fs.existsSync(testGzipFile);
+    existGzip.should.be.true;
     done();
   });
 
   it('should compress test.json using fast compress mode', function(done){
     gzipme(testFile, false, "fast");
-    var statGzip  = fs.statSync(testGzipFile);
-    statGzip.isFile().should.be.true;
+    var existGzip  = fs.existsSync(testGzipFile);
+    existGzip.should.be.true;
     done();
   });
 
   it('should compress test.json using invalid compress mode', function(done){
     gzipme(testFile, false, "invalid");
-    var statGzip  = fs.statSync(testGzipFile);
-    statGzip.isFile().should.be.true;
+    var existGzip  = fs.existsSync(testGzipFile);
+    existGzip.should.be.true;
     done();
   });
 
   it('should compress test.json to test.json.gz', function(done){
     gzipme(testFile);
-    var statGzip  = fs.statSync(testGzipFile);
-    statGzip.isFile().should.be.true;
+    var existGzip  = fs.existsSync(testGzipFile);
+    existGzip.should.be.true;
     done();
   });
 
   it('should compress test.json overwrite to test.json', function(done){
     gzipme(testFile, true);
-    var existGzip  = exists(testGzipFile);
+    var existGzip  = fs.existsSync(testGzipFile);
     existGzip.should.be.false;
     done();
   });
@@ -79,8 +78,8 @@ describe('gzipme', function(){
 
   it('should compress test.json to specified output file', function(done){
       gzipme(testFile, testOutputFile);
-      var existDefault  = exists(testGzipFile);
-      var existGzip  = exists(testOutputFile);
+      var existDefault  = fs.existsSync(testGzipFile);
+      var existGzip  = fs.existsSync(testOutputFile);
       existDefault.should.be.false;
       existGzip.should.be.true;
       done();
