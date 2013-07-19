@@ -1,19 +1,19 @@
+// Modules
 var fs = require('fs')
   , path = require('path')
   , exec = require('child_process').exec
   , gzipme = require('../')
   , exists = 'existsSync' in fs ? fs.existsSync : path.existsSync 
+// Variables
+  , testPath = __dirname + "/compress"
+  , testFile = testPath + "/test.json"
+  , testOutputFile = testPath + "/output.json"
+  , testGzipFile = testFile + ".gz"
+  , invalidFile = new Object()
+  , testFileContent = '{"test": "this is the test.json"}'
 ;
 
 describe('gzipme', function(){
-
-  var testPath = __dirname + "/compress"
-    , testFile = testPath + "/test.json"
-    , testOutputFile = testPath + "/output.json"
-    , testGzipFile = testFile + ".gz"
-    , invalidFile = new Object()
-    , testFileContent = '{"test": "this is the test.json"}'
-  ;
 
   beforeEach(function(done) {
     exec('mkdir -p '+ testPath, function() {
