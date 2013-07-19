@@ -1,3 +1,9 @@
+## 0.0.8
++ Improvements: Update commander.js
++ Improvements: Normalize race conditions tests
++ Improvements: Sintax sugar JS
++ Improvements: CLI prints file and gzip file sizes
+
 ## 0.0.7
 + Improvements: Avoid overwrite a file when throw an error
 + Improvements: Log a detailed error when throw it

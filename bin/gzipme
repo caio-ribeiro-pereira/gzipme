@@ -3,6 +3,7 @@
 var program = require('commander')
   , gzipme = require('../index')
   , pkg = require('../package.json')
+  , fs = require('fs')
 ;
 
 program
@@ -13,9 +14,16 @@ program
   .option('-c, --compress [compress_mode]', 'The compress mode is best or fast. (default best).')
   .parse(process.argv);
 
-var overwrite_or_output = (program.output || program.overwrite || false);
-var compress_mode = (program.compress || "best");
+var overwrite_or_output = (program.output || program.overwrite || false)
+	, compress_mode = (program.compress || "best")
+	, file = program.args.toString()
+;
 
-gzipme(program.args.toString(), overwrite_or_output, compress_mode);
-
-console.log("Gzipme has finished the compression.");
+gzipme(file, overwrite_or_output, compress_mode, function() {
+	var gzFile = program.overwrite ? file : file + '.gz'; 
+	console.log("File: %s", file);
+	console.log("Size: %d", fs.statSync(file).size);
+	console.log("Gzip: %s", gzFile);
+	console.log("Size: %d", fs.statSync(gzFile).size);
+	console.log("Gzipme has finished the compression.");
+});

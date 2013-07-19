@@ -1,7 +1,7 @@
 {
   "name": "gzipme",
   "description": "Gzipme is a module and CLI tool which compress files to gzip, it's built on top of zlib module and it's very easy to use it.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "keywords" : ["gzip", "zlib"],
@@ -14,10 +14,10 @@
     "bin": "./bin" 
   },
   "scripts": {
-    "test": "make coverage"
+    "test": "make test"
   },
   "dependencies": {
-    "commander": "~1.3.0"
+    "commander": "~1.3.2"
   },
   "devDependencies": {
     "mocha": "*",

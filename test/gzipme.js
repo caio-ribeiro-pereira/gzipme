@@ -30,36 +30,36 @@ describe('gzipme', function(){
 
   it('should compress test.json to test.json.gz', function(done){
     gzipme(testFile);
-    var existGzip  = exists(testGzipFile);
-    existGzip.should.be.true;
+    var statGzip  = fs.statSync(testGzipFile);
+    statGzip.isFile().should.be.true;
     done();
   });
 
   it('should compress test.json using best compress mode', function(done){
     gzipme(testFile, false, "best");
-    var existGzip  = exists(testGzipFile);
-    existGzip.should.be.true;
+    var statGzip  = fs.statSync(testGzipFile);
+    statGzip.isFile().should.be.true;
     done();
   });
 
   it('should compress test.json using fast compress mode', function(done){
     gzipme(testFile, false, "fast");
-    var existGzip  = exists(testGzipFile);
-    existGzip.should.be.true;
+    var statGzip  = fs.statSync(testGzipFile);
+    statGzip.isFile().should.be.true;
     done();
   });
 
   it('should compress test.json using invalid compress mode', function(done){
     gzipme(testFile, false, "invalid");
-    var existGzip  = exists(testGzipFile);
-    existGzip.should.be.true;
+    var statGzip  = fs.statSync(testGzipFile);
+    statGzip.isFile().should.be.true;
     done();
   });
 
   it('should compress test.json to test.json.gz', function(done){
     gzipme(testFile);
-    var existGzip  = exists(testGzipFile);
-    existGzip.should.be.true;
+    var statGzip  = fs.statSync(testGzipFile);
+    statGzip.isFile().should.be.true;
     done();
   });
 
