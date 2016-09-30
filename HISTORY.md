@@ -1,3 +1,11 @@
+## 0.1.0
++ Improvements: Added ES6 support
++ Improvements: Remove jscoverage and coverage test
++ Improvements: Update mocha, should and commander modules
++ Improvements: Added node 4.0, 5.0, 6.0 support for travis-ci
++ Improvements: Move makefile tests to npm test alias command
++ Improvements: Fix outputStream finish callback thanks by [frjanibo](https://github.com/caio-ribeiro-pereira/gzipme/issues/3#issue-180284790)
+
 ## 0.0.9
 + Improvements: Drop node 0.5, 0.6, 0.7, 0.9, 11.0 support
 + Improvements: Update commander.js to 2.0.0

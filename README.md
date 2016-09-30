@@ -7,6 +7,8 @@ A simple Node module and CLI tools which gzip files for you! :)
 
 It's very simple to use it, just follow the documentation below...
 
+Now has full ES6 support!
+
 ## Module Version
 ### Instalation
 
@@ -16,19 +18,19 @@ npm install gzipme
 
 ### The code
 ``` javascript
-var gzipme = require('gzipme');
+import gzipme from 'gzipme'
 
 // Compress "file.txt" to "file.txt.gz" in the same dir.
-gzipme("file.txt"); 
+gzipme("file.txt");
 
 // Compress "file.txt" and overwrite it to "file.txt" in the same dir.
-gzipme("file.txt", true); 
+gzipme("file.txt", true);
 
 // Compress "file.txt" to specified file "compressed.txt" in the same dir.
 gzipme("file.txt", "compressed.txt");
 
 // Compress "file.txt" using best compress mode (few bytes, but slow compression).
-gzipme("file.txt", false, "best"); 
+gzipme("file.txt", false, "best");
 
 // Compress "file.txt" using fast compress mode (fast compression, but more bytes).
 gzipme("file.txt", false, "fast");
@@ -69,15 +71,13 @@ npm install
 npm test
 ```
 
-It will run Mocha tests and will generate coverage reports and [all coverage tests are here](http://caio-ribeiro-pereira.github.io/gzipme/coverage.html).
-
 ## Author
 
 Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>
 
 Twitter: <http://twitter.com/crp_underground>
 
-Blog: <http://udgwebdev.com>
+Blog: <https://udgwebdev.com>
 
 ## TODO
 + Decompress a gzip file
@@ -90,7 +90,7 @@ And new ideas are welcome here!
 
 The MIT License (MIT)
 
-Copyright (c) 2013 caio.ribeiro.pereira@gmail.com
+Copyright (c) 2016 caio.ribeiro.pereira@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

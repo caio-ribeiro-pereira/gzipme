@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
-var program = require('commander')
-  , gzipme = require('../index')
-  , pkg = require('../package.json')
-  , fs = require('fs')
-;
+const fs = require('fs');
+const program = require('commander');
+const gzipme = require('../index');
+const pkg = require('../package.json');
 
 program
   .version(pkg.version)
@@ -14,16 +13,16 @@ program
   .option('-c, --compress [compress_mode]', 'The compress mode is best or fast. (default best).')
   .parse(process.argv);
 
-var overwrite_or_output = (program.output || program.overwrite || false)
-	, compress_mode = (program.compress || "best")
+const overwrite_or_output = (program.output || program.overwrite || false)
+	, compress_mode = (program.compress || 'best')
 	, file = program.args.toString()
 ;
 
-gzipme(file, overwrite_or_output, compress_mode, function() {
-	var gzFile = program.overwrite ? file : file + '.gz'; 
-	console.log("File: %s", file);
-	console.log("Size: %d", fs.statSync(file).size);
-	console.log("Gzip: %s", gzFile);
-	console.log("Size: %d", fs.statSync(gzFile).size);
-	console.log("Gzipme has finished the compression.");
+gzipme(file, overwrite_or_output, compress_mode, () => {
+	var gzFile = program.overwrite ? file : `${file}.gz`;
+	console.log('File: %s', file);
+	console.log('Size: %d', fs.statSync(file).size);
+	console.log('Gzip: %s', gzFile);
+	console.log('Size: %d', fs.statSync(gzFile).size);
+	console.log('Gzipme has finished the compression.');
 });

@@ -1,3 +1,1 @@
-module.exports = process.env.COVERAGE
-  ? require('./lib-cov/gzipme')
-  : require('./lib/gzipme');
+module.exports = require('./lib/gzipme');
