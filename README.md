@@ -7,7 +7,7 @@ A simple Node module and CLI tools which gzip files for you! :)
 
 It's very simple to use it, just follow the documentation below...
 
-Now has full ES6 support!
+Now has full ES6 support! It only works with Node.js 6.0 or using [Babel Transpiler](https://babeljs.io).
 
 ## Module Version
 ### Instalation
