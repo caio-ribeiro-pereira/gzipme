@@ -1,3 +1,7 @@
+## 0.1.1
++ Improvements: update mocha, commander and should modules
++ Bugfix: Fix error when there is no callback function thanks by [nbonamy](https://github.com/caio-ribeiro-pereira/gzipme/pull/4)
+
 ## 0.1.0
 + Improvements: Added ES6 support
 + Improvements: Remove jscoverage and coverage test
