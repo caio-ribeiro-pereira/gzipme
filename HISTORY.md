@@ -1,3 +1,6 @@
+## 0.1.2
++ Bugfix: Fix error when stream is finished but zip is not finished thanks by [lushibi](https://github.com/caio-ribeiro-pereira/gzipme/pull/7)
+
 ## 0.1.1
 + Improvements: update mocha, commander and should modules
 + Bugfix: Fix error when there is no callback function thanks by [nbonamy](https://github.com/caio-ribeiro-pereira/gzipme/pull/4)
