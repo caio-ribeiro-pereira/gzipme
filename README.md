@@ -1,63 +1,63 @@
-## Build Status
+## Gzipme
 
-[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.png?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme)
+[![Donate via Paypal](https://img.shields.io/badge/donate-paypal-blue)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L8MUNAKECUULY&source=url) [![Build Status](https://travis-ci.org/caio-ribeiro-pereira/gzipme.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/gzipme) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0e2b271a992343e8804ad868a9b17354)](https://www.codacy.com/manual/caio-ribeiro-pereira/gzipme?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caio-ribeiro-pereira/gzipme&amp;utm_campaign=Badge_Grade) [![Coverage Status](https://coveralls.io/repos/github/caio-ribeiro-pereira/gzipme/badge.svg?branch=master)](https://coveralls.io/github/caio-ribeiro-pereira/gzipme?branch=master) ![npm](https://img.shields.io/npm/dt/gzipme) ![GitHub](https://img.shields.io/github/license/caio-ribeiro-pereira/gzipme) ![npm](https://img.shields.io/npm/v/gzipme) ![GitHub stars](https://img.shields.io/github/stars/caio-ribeiro-pereira/gzipme) ![GitHub forks](https://img.shields.io/github/forks/caio-ribeiro-pereira/gzipme)
+
 
 ## About
-A simple Node module and CLI tools which gzip files for you! :)
 
-It's very simple to use it, just follow the documentation below...
+A simple and tiny lib/cli for gzip file compression. It's very simple to use it, take a look:
 
-Now has full ES6 support! It only works with Node.js 6.0 or using [Babel Transpiler](https://babeljs.io).
-
-## Module Version
 ### Instalation
 
 ``` bash
 npm install gzipme
 ```
 
-### The code
+## Module version
+### How to use
+
 ``` javascript
-import gzipme from 'gzipme'
+// Load gzipme module
+const gzipme = require('gzipme');
 
-// Compress "file.txt" to "file.txt.gz" in the same dir.
-gzipme("file.txt");
+// Compress 'file.txt' to 'file.txt.gz' in the same dir.
+gzipme('file.txt');
 
-// Compress "file.txt" and overwrite it to "file.txt" in the same dir.
-gzipme("file.txt", true);
+// Compress 'file.txt' into the same file.
+gzipme('file.txt', { overwrite: true });
 
-// Compress "file.txt" to specified file "compressed.txt" in the same dir.
-gzipme("file.txt", "compressed.txt");
+// Compress 'file.txt' to generate a file named as 'compressed.txt' in the same dir.
+gzipme('file.txt', { output: 'compressed.txt' });
 
-// Compress "file.txt" using best compress mode (few bytes, but slow compression).
-gzipme("file.txt", false, "best");
+// Compress 'file.txt' using best compress mode (few bytes, but slow compression).
+gzipme('file.txt', { mode: 'best' });
 
-// Compress "file.txt" using fast compress mode (fast compression, but more bytes).
-gzipme("file.txt", false, "fast");
+// Compress 'file.txt' using fast compress mode (fast compression, but more bytes).
+gzipme('file.txt', { mode: 'fast' });
 ```
 
-[Click here](http://nodejs.org/api/zlib.html#zlib_constants) to understand the Node.js Zlib compreension mode.
+[Click here](https://nodejs.org/api/zlib.html#zlib_zlib_constants) to understand the Node.js Zlib compreension mode.
 
 
-## CLI Version
+## CLI version
 ### Instalation
 
 ``` bash
 npm install -g gzipme
 ```
 
-### The Commands
+### All commands
 
 ``` bash
-# It's the same as function 'gzipme("file.txt")'.
+# It's the same as function 'gzipme('file.txt')'.
 gzipme file.txt
-# It's the same as function 'gzipme("file.txt", true)'.
+# It's the same as function 'gzipme('file.txt', { overwrite: true });'.
 gzipme -o file.txt
-# It's the same as function 'gzipme("file.txt", "compressed.txt")'.
+# It's the same as function 'gzipme('file.txt', { output: 'compressed.txt' });'.
 gzipme -O compressed.txt file.txt
-# It's the same as function 'gzipme("file.txt", false, "best")'.
+# It's the same as function 'gzipme('file.txt', { mode: 'fast' });'.
 gzipme -c best file.txt
-# It's the same as function 'gzipme("file.txt", false, "fast")'.
+# It's the same as function 'gzipme('file.txt', { mode: 'fast' });'.
 gzipme -c fast file.txt
 ```
 
@@ -73,39 +73,6 @@ npm test
 
 ## Author
 
-Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>
-
-Twitter: <http://twitter.com/crp_underground>
-
-Blog: <https://udgwebdev.com>
-
-## TODO
-+ Decompress a gzip file
-+ Compress full directories and subdirectories
-+ Compress and Decompress in async function
-
-And new ideas are welcome here!
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 caio.ribeiro.pereira@gmail.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>  
+Twitter: <http://twitter.com/crp_underground>  
+About me: <https://crpwebdev.github.io>
