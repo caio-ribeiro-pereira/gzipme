@@ -1,28 +1,46 @@
 {
   "name": "gzipme",
-  "description": "Gzipme is a module and CLI tool which compress files to gzip, it's built on top of zlib module and it's very easy to use it.",
-  "version": "0.1.2",
+  "description": "Gzipme is a module and CLI tool to compress files to gzip",
+  "version": "1.0.0",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "repository": "git://github.com/caio-ribeiro-pereira/gzipme",
   "keywords": [
     "gzip",
-    "zlib"
+    "zlib",
+    "compression",
+    "compress",
+    "gzip-files"
   ],
   "main": "index.js",
   "bin": {
     "gzipme": "./bin/gzipme"
   },
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "jest test/**",
+    "coverage": "jest test/** --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
-    "commander": "2.11.0"
+    "commander": "6.1.0"
   },
   "devDependencies": {
-    "mocha": "3.4.2",
-    "should": "11.2.1"
+    "coveralls": "3.1.0",
+    "eslint": "7.7.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "jest": "26.4.2"
   },
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 11.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/coverage/**"
+    ]
   }
 }

@@ -9,18 +9,20 @@ program
   .usage('[options] <file>')
   .option('-O, --output [name]', 'Specify output filename (default <file>.gz).')
   .option('-o, --overwrite', 'Overwrite file (default false).')
-  .option('-c, --compress [compressMode]', 'The compress mode is best or fast. (default best).')
+  .option('-c, --compress [compressMode]', 'The compress mode is "best" or "fast". (default best).')
   .parse(process.argv);
 
-const overwriteOrOutput = (program.output || program.overwrite || false);
-const compressMode = (program.compress || 'best');
+const { overwrite, output, compress } = program;
 const file = program.args.toString();
+const params = { overwrite: !!overwrite, output, compress };
 
-gzipme(file, overwriteOrOutput, compressMode, () => {
-	const gzFile = program.overwrite ? file : `${file}.gz`;
-	console.log('File: %s', file);
-	console.log('Size: %d', fs.statSync(file).size);
-	console.log('Gzip: %s', gzFile);
-	console.log('Size: %d', fs.statSync(gzFile).size);
-	console.log('Gzipme has finished the compression.');
-});
+gzipme(file, params)
+  .then(() => {
+    const gzFile = overwrite ? file : `${file}.gz`;
+    console.info(`File: ${file}`);
+    console.info(`Size: ${fs.statSync(file).size}`);
+    console.info(`Gzip: ${gzFile}`);
+    console.info(`Size: ${fs.statSync(gzFile).size}`);
+    console.info('Gzipme has finished the compression!');
+  })
+  .catch(console.error);
